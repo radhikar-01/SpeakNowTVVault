@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track Three</title>
+</head>
+
+<!-- "Puzzle" is to click the glowing eyes -->
+<!-- The eyes are somewhat unsettling without being disconcerting; changes the tone -->
+<!-- This one is an easier game, so the player doesn't lose motivation -->
+
+<body id="TrackThreeBG">
+    <div>
+        <img src="eyes.gif" class="eyes" id="eyes1">
+        <img src="eyes.gif" class="eyes" id="eyes2">
+        <img src="eyes.gif" class="eyes" id="eyes3">
+    </div>
+    <div id="revealButton" class="hiddenButton" onClick="reveal()">
+        <img src="eyes.gif" id="eyesMid">
+    </div>
+    <h2 id="revealedText"> Track 3: I can see you </h2> 
+    <button id="darkButton" onClick="nextTrack()">Next</button>
+    <div>
+        <img src="eyes.gif" class="eyes" id="eyes4">
+        <img src="eyes.gif" class="eyes" id="eyes5">
+        <img src="eyes.gif" class="eyes" id="eyes6">
+    </div>
+    <script>
+        function reveal() {
+            document.getElementById('eyes1').style.display = 'inline-block';
+            document.getElementById('eyes2').style.display = 'inline-block';
+            document.getElementById('eyes3').style.display = 'inline-block';
+            document.getElementById('eyes4').style.display = 'inline-block';
+            document.getElementById('eyes5').style.display = 'inline-block';
+            document.getElementById('eyes6').style.display = 'inline-block';
+            document.getElementById('eyes6').style.display = 'inline-block';
+            document.getElementById('revealedText').style.display = 'block';
+            document.getElementById('revealButton').style.display = 'none';
+            document.getElementById('darkButton').style.display = 'block';
+        }
+        function nextTrack() {
+            window.location.href = "track-four.html";
+        }
+    </script>
+</body>

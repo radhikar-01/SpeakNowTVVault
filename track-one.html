@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track One</title>
+</head>
+
+<!-- Page "flashes" like lightning: clue to the song title -->
+
+<!-- In this case, we guess the featured artist, not the song title -->
+
+<!-- "Puzzle" is to fill in the lyrics from Speak Now songs -->
+
+<!-- The three missing words are "fall," "out," and "boy" -->
+<!-- The featured artist is Fall Out Boy -->
+
+<body id="TrackOneBG">
+    <div id="block">
+        <h1 class="whiteText"> Vault One: Electric Touch </h1> 
+        <h2 class="whiteText"> Solve the puzzle to guess the feature </h1> 
+    </div>
+    <div id="block">
+        <h2 class="whiteText"> I watched you laughing from the passenger side </h1>
+        <h2 class="whiteText"> and realized I loved you in the [----] </h1>
+    </div>
+    <div id="block">
+        <h2 class="whiteText"> I remember that fight, 2:30 AM </h1>
+        <h2 class="whiteText"> as everything was slipping right [---] of our hands </h1>
+    </div>
+    <div id="block">
+        <h2 class="whiteText"> But you are not the kind of [---] </h1>
+        <h2 class="whiteText"> who should be marrying the wrong girl </h1>
+    </div>
+    <div id="form">
+        <form>
+            <label for="fob">The Featured Artist is... </label>
+            <input type="text" id="fob">
+            <input type="button" value="Submit" onclick="checkFob();" />
+        </form>
+    </div>
+    <script>
+        function checkFob() {
+            var confirmPassword = "fall out boy";
+            var password = document.getElementById("fob").value.toLowerCase().trim();
+            if (password == confirmPassword) {
+                window.location.href = "track-two.html"
+            }
+            else{
+                alert("Type in the missing lyrics to uncover the feature");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,592 @@
+/* * * * * * * * * * * */
+/* USED IN MULTIPLE */
+/* * * * * * * * * * * */
+
+.whiteText {
+  text-align: center;
+  color: white;
+}
+
+#block {
+  margin-bottom: 5%;
+}
+
+.hiddenButton {
+  background: transparent;
+  border: none;
+  font-size:0;
+  width: 30%;
+  height: 30%;
+  border-radius: 100%;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+/* * * * * * * * * * * */
+/* INDEX - Vault Image */
+/* * * * * * * * * * * */
+
+#vaultImage {
+  background-image: url("vault-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #926BB6;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bubble {
+  border-radius: 50%;
+  animation: bubbleHorizontal 15s infinite linear;
+}
+
+.bubbleWrapper {
+  animation: bubbleVertical 3s infinite ease-in-out;
+}
+
+#wrapperOne {
+  position: absolute;
+  top: 5%;
+  left: -5%;
+  animation-delay: 1s;
+}
+#bubbleOne {
+  background: black;
+  opacity: 0.3;
+  width: 20px;
+  height: 20px;
+  animation-delay: 1s;
+}
+#wrapperTwo {
+  position: absolute;
+  top: 40%;
+  left: -20%;
+  animation-delay: 2s;
+}
+#bubbleTwo {
+  background: white;
+  opacity: 0.3;
+  width: 30px;
+  height: 30px;
+  animation-delay: 2s;
+}
+#wrapperThree {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+#bubbleThree {
+  background: black;
+  opacity: 0.3;
+  width: 25px;
+  height: 25px;
+}
+#wrapperFour {
+  position: absolute;
+  top: 80%;
+  left: -10%;
+  animation-delay: 1s;
+}
+#bubbleFour {
+  background: black;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+  animation-delay: 1s;
+}
+#wrapperFive {
+  position: absolute;
+  top: 70%;
+  left: -5%;
+  animation-delay: 1.5s;
+}
+#bubbleFive {
+  background: white;
+  opacity: 0.3;
+  width: 20px;
+  height: 20px;
+  animation-delay: 1.5s;
+}
+
+@keyframes bubbleHorizontal {
+  50% {
+    transform: translateX(1500px);
+  }
+}
+@keyframes bubbleVertical {
+  50% {
+    transform: translateY(90px);
+  }
+}
+
+
+/* * * * * * * * * * * * * * * */
+/* TRACK ONE - Electric Touch  */
+/* * * * * * * * * * * * * * * */
+
+#TrackOneBG {
+  background-image: linear-gradient(0deg, rgb(47,100,148) 0%, black 100%);
+  background-attachment: fixed;
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+      opacity: 1;
+  }
+  25%, 75% {
+      opacity: 0;
+  }
+}
+
+#form {
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+label {
+  padding-left: 33%;
+  text-align: center;
+  color: white;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #0c224f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #000000;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * */
+/* TRACK TWO - When Emma Fell in Love  */
+/* * * * * * * * * * * * * * * * * * * */
+
+#TrackTwoBG {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, rgb(105,206,255) 0%, rgb(255, 188, 238) 100%);
+  background-attachment: fixed;
+}
+
+#multiPics {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.buttonsPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  width: 500px;
+  margin: auto;
+}
+
+.trackTwoButton {
+  display: flex;
+  background-color: #cc0099;
+  border: none;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.trackTwoButton:hover {
+  background-color: #990073;
+  cursor: pointer;
+}
+
+#fellBlock {
+  display: none;
+}
+
+#loveBlock {
+  display: none;
+}
+
+#correctBlock {
+  display: none;
+}
+
+.trackTwoNextButton {
+  display: flex;
+  margin: 0 auto;
+  background-color: #cc0099;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.trackTwoNextButton:hover {
+  background-color: #990073;
+  cursor: pointer;
+}
+
+
+/* * * * * * * * * * * * * * * */
+/* TRACK THREE - I Can See You */
+/* * * * * * * * * * * * * * * */
+
+#TrackThreeBG {
+  background-color: black;
+}
+
+.eyes {
+  max-width: 15%;
+}
+#eyes1 {
+  display: none;
+  margin-top: 80px;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyes2 {
+  display: none;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyes3 {
+  display: none;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyes4 {
+  display: none;
+  margin-top: 100px;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyes5 {
+  display: none;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyes6 {
+  display: none;
+  margin-left: 13.5%;
+  animation: fadeIn 5s;
+}
+#eyesMid {
+  display: inline-block;
+  max-width: 50%;
+  margin-top: 20px;
+  margin-left: 27%;
+}
+#eyesMid:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#darkButton {
+  display: none;
+  width: 25%;
+  background-color: yellowgreen;
+  color: black;
+  padding: 14px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  border: none;
+  border-radius: 4px;
+}
+#darkButton:hover {
+  background-color: #77a026;
+  cursor: pointer;
+}
+
+#revealedText {
+  display: none;
+  margin: auto;
+  width: 90%;
+  padding-top: 70px;
+  color: white;
+  text-align: center;
+}
+
+
+/* * * * * * * * * * * * * * * * * */
+/* TRACK FOUR - Castles Crumbling  */
+/* * * * * * * * * * * * * * * * * */
+
+#TrackFourBG {
+  background-image: url("castle.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.hiddenButtonMulti {
+  background: transparent;
+  border: none;
+  font-size:0;
+  width: 5%;
+  height: 5%;
+  margin: 0;
+  position: absolute;
+}
+.hiddenButtonMulti:hover {
+  cursor: pointer;
+}
+#hiddenButton1 {
+  top: 5%;
+  left: 5%;
+}
+#hiddenButton2 {
+  top: 15%;
+  left: 50%;
+}
+#hiddenButton3 {
+  top: 25%;
+  left: 10%;
+}
+#hiddenButton4 {
+  top: 40%;
+  left: 80%;
+}
+#hiddenButton5 {
+  top: 15%;
+  left: 65%;
+}
+#hiddenButton6 {
+  top: 80%;
+  left: 45%;
+}
+#hiddenButton7 {
+  top: 70%;
+  left: 70%;
+}
+#hiddenButton8 {
+  top: 50%;
+  left: 40%;
+}
+#hiddenButton9 {
+  top: 20%;
+  left: 75%;
+}
+#hiddenButton10 {
+  top: 75%;
+  left: 35%;
+}
+#hiddenButton11 {
+  top: 85%;
+  left: 50%;
+}
+#hiddenButton12 {
+  top: 5%;
+  left: 70%;
+}
+#hiddenButton13 {
+  top: 70%;
+  left: 5%;
+}
+
+#revealedPallet {
+  display: none;
+  background-color: #0c224f;
+  color: white;
+  margin: 15% auto 25%;
+  padding: 10px;
+  width: 50%;
+  height: 25%;
+  border-radius: 14px;
+}
+
+.trackFourButton {
+  display: none;
+  background-color: #04a8b1;
+  border: none;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  margin: auto;
+  width: 25%;
+  border-radius: 4px;
+}
+.trackFourButton:hover {
+  background-color: #05696e;
+  cursor: pointer;
+}
+
+.revealedText2 {
+  display: none;
+  text-align: center;
+  color: white;
+}
+
+
+/* * * * * * * * * * * * * * */
+/* TRACK FIVE - Foolish One  */
+/* * * * * * * * * * * * * * */
+
+#TrackFiveBG {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, rgb(160,244,255) 0%, rgb(75,0,153) 100%);
+  background-attachment: fixed;
+}
+
+.buttonsPanel2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  margin: auto;
+  width: 250px;
+}
+
+.trackFiveButton {
+  display: flex;
+  background-color: #b777fa;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 4px;
+}
+.trackFiveButton:hover {
+  background-color: #00e1ff;
+  cursor: pointer;
+}
+
+#mathBlock {
+  display: none;
+}
+
+#historyBlock {
+  display: none;
+}
+
+#correctBlock2 {
+  display: none;
+  margin-top: 5%;
+}
+
+
+/* * * * * * * * * * * * */
+/* TRACK SIX - Timeless  */
+/* * * * * * * * * * * * */
+
+#TrackSixBG {
+  background-image: radial-gradient(circle, rgb(113,173,204), rgb(204,113,156), rgb(9,43,111), rgb(204,113,113));
+  background-attachment: fixed;
+}
+
+#sliderOne {
+  width: 100%;
+}
+#sliderTwo {
+  display: none;
+}
+#sliderThree {
+  display: none;
+}
+
+.slider {
+  appearance: none;
+  position: absolute;
+  margin: 0;
+  left: 25%;
+  width: 50%;
+  height: 5px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #092b6f;
+  cursor: pointer;
+}
+#sldr1 {
+  top: 25%;
+}
+#sldr2 {
+  top: 50%;
+}
+#sldr3 {
+  top: 75%;
+}
+
+.timeText {
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+#timeText1 {
+  left: 45%;
+  top: 25%;
+}
+#timeText2 {
+  left: 43%;
+  top: 50%;
+}
+#timeText3 {
+  left: 43%;
+  top: 75%;
+}
+
+.trackSixButton {
+  background-color: #cc719c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.trackSixButton:hover {
+  background-color: #6a384f;
+  cursor: pointer;
+}

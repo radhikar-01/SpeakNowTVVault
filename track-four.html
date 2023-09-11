@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track Four</title>
+</head>
+
+<!-- "Puzzle" is to see where the cursor changes (this is a hidden button) -->
+
+<!-- There are 13 buttons in total (reference to Taylor Swift's lucky number) -->
+<!-- The correct button hides (approximately) under the leftmost upper window -->
+
+<!-- While the background gif isn't a castle, it conveys the spooky medieval vibe -->
+
+<!-- This is the most difficult puzzle, as 12 of the buttons are "wrong" -->
+
+<body id="TrackFourBG">
+    <h2 class="whiteText"> Click around to find the song </h2>
+    <div id="hiddenButton1" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton2" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton3" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton4" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton5" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton6" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton7" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton8" class="hiddenButtonMulti" onClick="revealSuccess()"></div>
+    <div id="hiddenButton9" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton10" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton11" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton12" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="hiddenButton13" class="hiddenButtonMulti" onClick="revealFail()"></div>
+    <div id="revealedPallet">
+        <h2 id="trackFourSuccess" class="revealedText2">
+            Track Four: Castles Crumbling 
+            <br>
+            Featuring: Hayley Williams
+        </h2>
+        <h2 id="trackFourFail" class="revealedText2">
+            Whoops, this button isn't it!
+            <br>
+            No new info! Sorry!
+        </h2>
+        <button id="revealButton" class="trackFourButton" onClick="nextTrack()">Next</button>
+        <button id="hideButton" class="trackFourButton" onClick="hide()">Retry</button>
+    </div>
+        
+    </div>
+    <script>
+        function revealSuccess() {
+            document.getElementById('revealedPallet').style.display = 'block';
+            document.getElementById('trackFourSuccess').style.display = 'block';
+            document.getElementById('revealButton').style.display = 'block';
+            document.getElementById('hideButton').style.display = 'none';
+        }
+        function revealFail() {
+            document.getElementById('revealedPallet').style.display = 'block';
+            document.getElementById('trackFourFail').style.display = 'block';
+            document.getElementById('hideButton').style.display = 'block';
+        }
+        function hide() {
+            document.getElementById('revealedPallet').style.display = 'none';
+            document.getElementById('trackFourFail').style.display = 'none';
+            document.getElementById('hideButton').style.display = 'block';
+        }
+        function nextTrack() {
+            window.location.href = "track-five.html";
+        }
+    </script>
+</body>
+
+</html>

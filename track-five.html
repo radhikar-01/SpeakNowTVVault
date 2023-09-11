@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track Five</title>
+</head>
+
+<!-- "Puzzle" is to answer the questions incorrectly -->
+
+<!-- As the song is called "foolish one," the user must be "foolish" to win -->
+<!-- HTML webpage alerts are used to indicate a correct or incorrect choice -->
+
+<!-- Returns to a jovial tone after the previous two darker ones -->
+
+<body id="TrackFiveBG">
+    <div id="block">
+        <h1 class="whiteText"> Vault Five </h1> 
+        <h2 class="whiteText"> Hint: "So many things you wish I knew"</h2> 
+        <h2 class="whiteText"> Hint: "My mother accused me of losing my mind"</h2> 
+        <h2 class="whiteText"> Hint: "Every one of us has messed up too"</h2> 
+    </div>
+    <div>
+        <h2 class="whiteText"> When did Speak Now come out? </h2> 
+        <div class="buttonsPanel2">
+            <button class="trackFiveButton" onClick="correct1()" >1989</button>
+            <button class="trackFiveButton" onClick="wrong()" >2010</button>
+        </div>
+    </div>
+    <div id="mathBlock">
+        <h2 class="whiteText"> What is 19 + 32? </h2> 
+        <div class="buttonsPanel2">
+            <button class="trackFiveButton" onClick="correct2()" >13</button>
+            <button class="trackFiveButton" onClick="wrong()" >51, duh</button>
+        </div>
+    </div>
+    <div id="historyBlock">
+        <h2 class="whiteText"> What was the lead single? </h2> 
+        <div class="buttonsPanel2">
+            <button class="trackFiveButton" onClick="wrong()" >Mine</button>
+            <button class="trackFiveButton" onClick="correct3()" >Ours</button>
+        </div>
+    </div>
+    <div id="correctBlock2">
+        <h2 class="whiteText"> You played dumb to play right! </h2> 
+        <h2 class="whiteText"> Taylor never said love makes sense! </h2> 
+        <h1 class="whiteText"> Song 5: Foolish One </h1> 
+        <div class="buttonsPanel2">
+            <button class="trackFiveButton" onClick="next()" >Next</button>
+        </div>
+    </div>
+    <script>
+        function correct1() {
+            alert("That can't be right, or can it?");
+            document.getElementById('mathBlock').style.display = 'flex';
+            document.getElementById('mathBlock').style.flexDirection = 'column';
+        }
+        function correct2() {
+            alert("13 is Taylor's lucky number I guess...");
+            document.getElementById('historyBlock').style.display = 'flex';
+            document.getElementById('historyBlock').style.flexDirection = 'column';
+        }
+        function correct3() {
+            alert("That song is only available on the deluxe edition???");
+            document.getElementById('correctBlock2').style.display = 'flex';
+            document.getElementById('correctBlock2').style.flexDirection = 'column';
+            document.getElementById('correctBlock2').scrollIntoView();
+        }
+        function wrong() {
+            alert("Hmm, seems right to me, but it hasn't worked.");
+        }
+        function next() {
+            window.location.href = "track-six.html";
+        }
+    </script>
+</body>

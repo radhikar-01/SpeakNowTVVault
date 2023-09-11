@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track Six</title>
+</head>
+
+<!-- "Puzzle" is to move the slider to the time referenced in the corresponding song -->
+
+<!-- First song: Mine -->
+    <!-- "I remember that night, 2:30 AM, when everything was slipping..." -->
+<!-- Second song: Enchanted -->
+    <!-- "The lingering question kept me up, 2 AM, who do you love?" -->
+<!-- First song: Last Kiss -->
+    <!-- "...the look on your face, lit through the darkness at 1:58" -->
+
+<!-- Radial gradient background invokes the idea of a clock -->
+
+<body id="TrackSixBG">
+    <h2 class="whiteText"> Adjust the clocks!</h2>
+    <div id="sliderOne">
+        <input type="range" min="120" max="180" value="120" class="slider" id="sldr1">
+        <h2 class="timeText" id="timeText1">
+            Mine: <span id="hours1"></span>:<span id="minutes1"></span>
+        </h2>
+    </div>
+    <div id="sliderTwo">
+        <input type="range" min="110" max="170" value="110" class="slider" id="sldr2">
+        <h2 class="timeText" id="timeText2">
+            Enchanted: <span id="hours2"></span>:<span id="minutes2"></span>
+        </h2>
+    </div>
+    <div id="sliderThree">
+        <input type="range" min="60" max="120" value="60" class="slider" id="sldr3">
+        <h2 class="timeText" id="timeText3">
+            Last Kiss: <span id="hours3"></span>:<span id="minutes3"></span>
+        </h2>
+    </div>
+    <div id="revealedPallet">
+        <h2 class="whiteText">
+            Track Six: Timeless
+            <br><br>
+            Congrats! GAME OVER!
+            <br><br>
+            <button class="trackSixButton" onClick="back()">Back</button>
+        </h2>
+    </div>
+      
+    <script>   
+        var slider1 = document.getElementById("sldr1");
+
+        var hours1 = Math.floor(slider1.value / 60);
+        var minutes1 = slider1.value % 60;
+
+        var hoursOutput1 = document.getElementById("hours1");
+        hoursOutput1.innerHTML = hours1;
+        var minutesOutput1 = document.getElementById("minutes1");
+        if (minutes1 < 10) {
+            minutesOutput1.innerHTML = "0"+minutes1;
+        }
+        else {
+            minutesOutput1.innerHTML = minutes1;
+        }
+      
+        slider1.oninput = function() {
+            hours1 = Math.floor(this.value / 60);
+            minutes1 = this.value % 60;
+            hoursOutput1.innerHTML = hours1;
+            if (minutes1 < 10) {
+                minutesOutput1.innerHTML = "0"+minutes1;
+            }
+            else {
+                minutesOutput1.innerHTML = minutes1;
+            }
+
+            if (this.value == 150) {
+                document.getElementById('sliderTwo').style.display = 'block';
+            }
+            else {
+                document.getElementById('sliderTwo').style.display = 'none';
+            }
+        }
+        var slider2 = document.getElementById("sldr2");
+
+        var hours2 = Math.floor(slider2.value / 60);
+        var minutes2 = slider2.value % 60;
+
+        var hoursOutput2 = document.getElementById("hours2");
+        hoursOutput2.innerHTML = hours2;
+        var minutesOutput2 = document.getElementById("minutes2");
+        if (minutes2 < 10) {
+            minutesOutput2.innerHTML = "0"+minutes2;
+        }
+        else {
+            minutesOutput2.innerHTML = minutes2;
+        }        
+        
+        slider2.oninput = function() {
+            hours2 = Math.floor(this.value / 60);
+            minutes2 = this.value % 60;
+            hoursOutput2.innerHTML = hours2;
+            if (minutes2 < 10) {
+                minutesOutput2.innerHTML = "0"+minutes2;
+            }
+            else {
+                minutesOutput2.innerHTML = minutes2;
+            }
+
+            if (this.value == 120) {
+                document.getElementById('sliderThree').style.display = 'block';
+            }
+            else {
+                document.getElementById('sliderThree').style.display = 'none';
+            }
+        }
+        var slider3 = document.getElementById("sldr3");
+
+        var hours3 = Math.floor(slider3.value / 60);
+        var minutes3 = slider3.value % 60;
+
+        var hoursOutput3 = document.getElementById("hours3");
+        hoursOutput3.innerHTML = hours3;
+        var minutesOutput3 = document.getElementById("minutes3");
+        if (minutes3 < 10) {
+            minutesOutput3.innerHTML = "0"+minutes3;
+        }
+        else {
+            minutesOutput3.innerHTML = minutes3;
+        } 
+        
+        slider3.oninput = function() {
+            hours3 = Math.floor(this.value / 60);
+            minutes3 = this.value % 60;
+            hoursOutput3.innerHTML = hours3;
+            if (minutes3 < 10) {
+                minutesOutput3.innerHTML = "0"+minutes3;
+            }
+            else {
+                minutesOutput3.innerHTML = minutes3;
+            }
+            if (this.value == 118) {
+                document.getElementById('sliderOne').style.display = 'none';
+                document.getElementById('sliderTwo').style.display = 'none';
+                document.getElementById('revealedPallet').style.display = 'block';
+            }
+            else {
+                document.getElementById('sliderOne').style.display = 'block';
+                document.getElementById('sliderTwo').style.display = 'block';
+                document.getElementById('revealedPallet').style.display = 'none';
+            }
+        }
+
+        function back() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>

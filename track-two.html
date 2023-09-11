@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<link href="style.css" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Track Two</title>
+</head>
+
+<!-- In this case, we guess the song title, not the artist -->
+
+<!-- "Puzzle" is to guess the word that relates to the images -->
+
+<!-- First image: Celebrities named Emma -->
+    <!-- Emma Chamberlain, Emma Watson, Emma Stone, Emma Roberts -->
+<!-- Second image: Music video screenshots for songs called "Falling" -->
+    <!-- Trevor Daniel, Harry Styles, Why Don't We -->
+<!-- Third image: Characters named Emma, with their romantic interests -->
+    <!-- Emma Swan (OUAT), Emma Woodhouse (Emma), Emma Gilbert (H2O) -->
+
+<body id="TrackTwoBG">
+    <div id="block">
+        <h1 class="whiteText"> Vault Two: </h1> 
+        <h2 class="whiteText"> Answer the questions to fill in the title </h2> 
+    </div>
+    <div>
+        <h2 class="whiteText"> Who is she? </h2> 
+        <img id="multiPics" src="emmas.png">
+        <div class="buttonsPanel">
+            <button class="trackTwoButton" onClick="wrong()" >Emily</button>
+            <button class="trackTwoButton" onClick="wrong()" >Eliza</button>
+            <button class="trackTwoButton" onClick="correct1()">Emma</button>
+            <button class="trackTwoButton" onClick="wrong()" >Erica</button>
+        </div>
+    </div>
+    <div id="fellBlock">
+        <h2 class="whiteText"> What happened to her? </h2> 
+        <img id="multiPics" src="fallings.png">
+        <div class="buttonsPanel">
+            <button class="trackTwoButton" onClick="correct2()" >Fell</button>
+            <button class="trackTwoButton" onClick="wrong()" >Cried</button>
+            <button class="trackTwoButton" onClick="wrong()">Played</button>
+            <button class="trackTwoButton" onClick="wrong()" >Danced</button>
+        </div>
+    </div>
+    <div id="loveBlock">
+        <h2 class="whiteText"> Where did she fall? </h2> 
+        <img id="multiPics" src="inLoves.png">
+        <div class="buttonsPanel">
+            <button class="trackTwoButton" onClick="wrong()" >The Jungle</button>
+            <button class="trackTwoButton" onClick="wrong()" >The year 1818</button>
+            <button class="trackTwoButton" onClick="wrong()">Australia</button>
+            <button class="trackTwoButton" onClick="correct3()" >In Love</button>
+        </div>
+    </div>
+    <div id="correctBlock">
+        <h2 class="whiteText"> Correct! </h2> 
+        <h1 class="whiteText"> Song 2: When Emma Fell in Love </h1> 
+        <button class="trackTwoNextButton" onClick="next()" >Next</button>
+    </div>
+    <script>
+        function correct1() {
+            document.getElementById('fellBlock').style.display = 'flex';
+            document.getElementById('fellBlock').style.flexDirection = 'column';
+            document.getElementById('fellBlock').scrollIntoView();
+        }
+        function correct2() {
+            document.getElementById('loveBlock').style.display = 'flex';
+            document.getElementById('loveBlock').style.flexDirection = 'column';
+            document.getElementById('loveBlock').scrollIntoView();
+        }
+        function correct3() {
+            document.getElementById('correctBlock').style.display = 'flex';
+            document.getElementById('correctBlock').style.flexDirection = 'column';
+            document.getElementById('correctBlock').scrollIntoView();
+        }
+        function wrong() {
+            alert("Nope! Try again!");
+        }
+        function next() {
+            window.location.href = "track-three.html";
+        }
+    </script>
+</body>
